@@ -26,5 +26,4 @@ router.get('/paste', async (ctx) => {
   ctx.body = exec('powershell.exe -C Get-Clipboard').stdout;
 });
 
-
 app.listen(process.argv[2] ? process.argv[2] : 80);
