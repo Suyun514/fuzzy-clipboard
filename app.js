@@ -15,8 +15,6 @@ router.get('/', async (ctx) => {
 });
 
 router.post('/copy', async (ctx) => {
-  console.log([ctx.request.rawBody]);
-
   const clipExe = spawn('clip.exe ', []);
   clipExe.stdin.write(ctx.request.rawBody);
   clipExe.stdin.end();
